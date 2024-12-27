@@ -7,34 +7,34 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <style>
         :root {
-            /* Ultra-modern color palette */
-            --primary: #0c0f12;
-            --secondary: #161b21;
-            --accent: #10b981;
-            --accent-dark: #059669;
-            --accent-light: #34d399;
-            --text: #f3f4f6;
-            --text-muted: #9ca3af;
-            --surface: #1f2937;
+            /* Professional coastal color palette */
+            --primary: #003d5b;         /* Deep Ocean Blue */
+            --secondary: #00719c;       /* Classic Marine Blue */
+            --accent: #ff7885;         /* Bright Coral Pink */
+            --accent-dark: #0089b8;    /* Deep Turquoise */
+            --accent-light: #7dcfea;   /* Light Sea Blue */
+            --text: #ffffff;          /* Clean White */
+            --text-muted: #c5d8e1;    /* Soft Blue-Grey */
+            --surface: #004c70;       /* Rich Ocean Blue */
             
-            /* New gradient system */
-            --gradient-1: linear-gradient(135deg, #10b981, #059669);
-            --gradient-2: linear-gradient(135deg, #34d399, #10b981);
+            /* Updated gradients */
+            --gradient-1: linear-gradient(135deg, #ff7885, #003d5b);
+            --gradient-2: linear-gradient(135deg, #7dcfea, #00719c);
             --gradient-surface: linear-gradient(145deg, 
-                rgba(31, 41, 55, 0.9), 
-                rgba(17, 24, 39, 0.95)
+                rgba(0, 61, 91, 0.9), 
+                rgba(0, 76, 112, 0.95)
             );
+            
+            /* Enhanced shadows */
+            --shadow-sm: 0 2px 8px rgba(0, 61, 91, 0.2);
+            --shadow-md: 0 4px 16px rgba(0, 61, 91, 0.3);
+            --shadow-lg: 0 8px 32px rgba(0, 61, 91, 0.4);
+            --shadow-accent: 0 8px 32px rgba(255, 120, 133, 0.2);
             
             /* Modern blur effects */
             --blur-sm: blur(8px);
             --blur-md: blur(16px);
             --blur-lg: blur(24px);
-            
-            /* Enhanced shadows */
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
-            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
-            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
-            --shadow-accent: 0 8px 32px rgba(16, 185, 129, 0.2);
             
             /* Modern spacing */
             --space-xs: clamp(0.5rem, 1vw, 0.75rem);
@@ -160,7 +160,7 @@
             font-size: clamp(2.5rem, 5vw, 4rem);
             line-height: 1.1;
             margin-bottom: var(--space-sm);
-            background: var(--gradient-1);
+            background: linear-gradient(135deg, #ff9eaa, #ff7885);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -265,7 +265,7 @@
         .section-title {
             font-size: clamp(2rem, 4vw, 3rem);
             margin-bottom: var(--space-sm);
-            background: var(--gradient-1);
+            background: linear-gradient(135deg, #ff9eaa, #ff7885);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -672,11 +672,14 @@
         }
 
         .author-avatar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 48px;
             height: 48px;
             border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
             overflow: hidden;
-            border: 2px solid var(--accent);
         }
 
         .author-avatar img {
@@ -795,7 +798,7 @@
             transform: translateY(-5px) scale(1.02);
             box-shadow: 
                 0 20px 40px rgba(0, 0, 0, 0.2),
-                0 0 30px rgba(34, 197, 94, 0.2);
+                0 0 30px rgba(255, 120, 133, 0.2);
         }
 
         /* Enhanced Service Card Animation */
@@ -808,7 +811,7 @@
             transform: translateY(-5px) scale(1.02);
             box-shadow: 
                 0 20px 40px rgba(0, 0, 0, 0.2),
-                0 0 30px rgba(34, 197, 94, 0.2);
+                0 0 30px rgba(255, 120, 133, 0.2);
         }
 
         .service-icon {
@@ -829,7 +832,7 @@
             transform: translateY(-5px) scale(1.02);
             box-shadow: 
                 0 20px 40px rgba(0, 0, 0, 0.2),
-                0 0 30px rgba(34, 197, 94, 0.2);
+                0 0 30px rgba(255, 120, 133, 0.2);
         }
 
         /* Tablet Responsive Design */
@@ -1331,6 +1334,64 @@
                 gap: 0.375rem;
             }
         }
+
+        /* Enhanced card hover effects */
+        .service-card:hover,
+        .testimonial-card:hover,
+        .process-step:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.2),
+                0 0 30px rgba(255, 120, 133, 0.2);
+        }
+
+        /* Floating animation for cards */
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(-1deg); }
+            50% { transform: translateY(-15px) rotate(1deg); }
+        }
+
+        .card-1 {
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .card-2 {
+            animation: float 6s infinite ease-in-out reverse;
+        }
+
+        /* Decorative elements */
+        .decoration-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--gradient-1);
+            filter: blur(60px);
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        .circle-1 {
+            width: 300px;
+            height: 300px;
+            top: -100px;
+            right: -50px;
+        }
+
+        .circle-2 {
+            width: 250px;
+            height: 250px;
+            bottom: -50px;
+            left: -75px;
+        }
+
+        /* Enhanced image container */
+        .hero-image-container {
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hero-image-container:hover {
+            transform: perspective(1000px) rotateY(0deg) translateZ(20px);
+        }
     </style>
 </head>
 <body>
@@ -1355,13 +1416,13 @@
                         <span>Handcrafted Bracelet Collection</span>
                     </div>
                     <h1 class="hero-title">Wear Your Story</h1>
-                    <p class="hero-subtitle">Experience unique, handcrafted bracelets that capture the essence of coastal living. Created with love in Mount Pleasant.</p>
+                    <p class="hero-subtitle">Experience unique, handcrafted bracelets that capture the essence of coastal living. Created with love in Sullivan's Island.</p>
                     <!-- CTAs will go here -->
                 </div>
                 <div class="hero-visual">
                     <div class="hero-image-container">
-                        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&q=80" 
-                             alt="Professional lawn care" 
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80" 
+                             alt="Beautiful coastal beach" 
                              class="hero-image">
                         <div class="hero-image-overlay"></div>
                         <div class="grain-overlay"></div>
@@ -1414,7 +1475,7 @@
                                         <span class="customer-text">Tons of Happy Customers</span>
                                         <div class="badge-accent">
                                             <span class="badge-icon">🏆</span>
-                                            <span>Mount Pleasant's Choice</span>
+                                            <span>Sullivan's Island's Choice</span>
                                         </div>
                                     </div>
                                 </div>
@@ -1447,8 +1508,8 @@
                     <div class="service-icon">
                         <i class='bx bx-diamond'></i>
                     </div>
-                    <h3 class="service-title">Beaded Collection</h3>
-                    <p class="service-description">Elegant beaded bracelets featuring natural stones and premium materials.</p>
+                    <h3 class="service-title">String Collection</h3>
+                    <p class="service-description">Elegant string bracelets featuring premium materials and unique patterns.</p>
                 </div>
 
                 <div class="service-card">
@@ -1475,48 +1536,48 @@
             <header class="section-header">
                 <div class="section-badge">
                     <i class='bx bx-message-square-dots'></i>
-                    <span>Testimonials</span>
+                    <span>Customer Love</span>
                 </div>
-                <h2 class="section-title">What Our Clients Say</h2>
-                <p class="section-subtitle">Real feedback from satisfied customers who trust us with their lawns</p>
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-subtitle">Hear from those who wear and love our handcrafted bracelets</p>
             </header>
 
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-content">"Clark Lawns transformed our yard completely. Their attention to detail makes our lawn stand out in the neighborhood."</p>
+                    <p class="testimonial-content">"The Ocean Collection bracelet I received is stunning! The attention to detail and quality of materials is exceptional. I get compliments every time I wear it."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="https://randomuser.me/api/portraits/women/42.jpg" alt="Sarah M.">
+                            <i class='bx bx-user-circle' style="font-size: 48px; color: #c5d8e1;"></i>
                         </div>
                         <div class="author-info">
                             <span class="author-name">Sarah M.</span>
-                            <span class="author-title">Mount Pleasant</span>
+                            <span class="author-title">Verified Buyer</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
-                    <p class="testimonial-content">"Best lawn service in Mount Pleasant. They're reliable, thorough, and our lawn has never looked better."</p>
+                    <p class="testimonial-content">"I bought matching Friendship Series bracelets for my best friends. They're beautiful and such a meaningful way to stay connected."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James K.">
+                            <i class='bx bx-user-circle' style="font-size: 48px; color: #c5d8e1;"></i>
                         </div>
                         <div class="author-info">
-                            <span class="author-name">James K.</span>
-                            <span class="author-title">Mount Pleasant</span>
+                            <span class="author-name">Emma K.</span>
+                            <span class="author-title">Verified Buyer</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
-                    <p class="testimonial-content">"Professional, punctual, and perfect results every time. Highly recommend their services to anyone in Mount Pleasant."</p>
+                    <p class="testimonial-content">"These bracelets are more than just jewelry - they're pieces of art. The beadwork is intricate and the designs are so unique."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">
-                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael R.">
+                            <i class='bx bx-user-circle' style="font-size: 48px; color: #c5d8e1;"></i>
                         </div>
                         <div class="author-info">
-                            <span class="author-name">Michael R.</span>
-                            <span class="author-title">Mount Pleasant</span>
+                            <span class="author-name">Michelle R.</span>
+                            <span class="author-title">Verified Buyer</span>
                         </div>
                     </div>
                 </div>
@@ -1531,27 +1592,27 @@
                     <i class='bx bx-list-check'></i>
                     <span>Our Process</span>
                 </div>
-                <h2 class="section-title">How We Work</h2>
-                <p class="section-subtitle">Simple, effective steps to deliver exceptional lawn care service</p>
+                <h2 class="section-title">Handcrafted with Love</h2>
+                <p class="section-subtitle">Each piece is carefully created following our signature process</p>
             </header>
 
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
-                    <h3 class="step-title">Initial Consultation</h3>
-                    <p class="step-description">We begin with a thorough assessment of your property and discuss your specific needs and goals for your outdoor space.</p>
+                    <h3 class="step-title">Design & Selection</h3>
+                    <p class="step-description">We carefully select premium materials and create unique designs inspired by coastal living.</p>
                 </div>
 
                 <div class="process-step">
                     <div class="step-number">2</div>
-                    <h3 class="step-title">Custom Plan</h3>
-                    <p class="step-description">We develop a tailored maintenance plan that fits your property's needs and your schedule preferences.</p>
+                    <h3 class="step-title">Handcrafting</h3>
+                    <p class="step-description">Each bracelet is meticulously handcrafted with attention to detail and quality.</p>
                 </div>
 
                 <div class="process-step">
                     <div class="step-number">3</div>
-                    <h3 class="step-title">Expert Service</h3>
-                    <p class="step-description">Our skilled team executes the plan with precision, using professional equipment and proven techniques.</p>
+                    <h3 class="step-title">Quality Check</h3>
+                    <p class="step-description">Every piece undergoes thorough quality checks to ensure durability and beauty.</p>
                 </div>
             </div>
         </div>
@@ -1574,20 +1635,20 @@
                 </p>
                 
                 <div class="footer-contact">
-                    <a href="tel:+13129726680" class="contact-link">
+                    <a href="tel:+18439819626" class="contact-link">
                         <i class='bx bx-phone'></i>
-                        <span>(312) 972-6680</span>
+                        <span>(843) 981-9626</span>
                     </a>
                     <div class="location">
                         <i class='bx bx-map'></i>
-                        <span>Mount Pleasant, SC</span>
+                        <span>Sullivan's Island, SC</span>
                     </div>
                 </div>
 
                 <div class="footer-divider"></div>
                 
                 <p class="copyright">
-                    © 2024 Clark Lawns | Mount Pleasant, SC | All rights reserved
+                    © 2024 Coastal Connect | Sullivan's Island, SC | All rights reserved
                 </p>
             </div>
         </div>
