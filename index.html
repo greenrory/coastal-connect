@@ -7,47 +7,44 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <style>
         :root {
-            /* Professional coastal color palette */
-            --primary: #003d5b;         /* Deep Ocean Blue */
-            --secondary: #00719c;       /* Classic Marine Blue */
-            --accent: #ff7885;         /* Bright Coral Pink */
-            --accent-dark: #0089b8;    /* Deep Turquoise */
-            --accent-light: #7dcfea;   /* Light Sea Blue */
-            --text: #ffffff;          /* Clean White */
-            --text-muted: #c5d8e1;    /* Soft Blue-Grey */
-            --surface: #004c70;       /* Rich Ocean Blue */
+            /* Coastal-inspired color palette */
+            --primary: #1B4965;         /* Deep Ocean Blue */
+            --secondary: #5FA8D3;       /* Clear Sky Blue */
+            --accent: #FF9A8C;          /* Coral Pink */
+            --accent-dark: #62B6CB;     /* Seafoam Blue */
+            --accent-light: #BEE9E8;    /* Light Aqua */
+            --text: #ffffff;            /* Clean White */
+            --text-muted: #CAE9FF;      /* Soft Sky Blue */
+            --surface: #2C5F7C;         /* Mid Ocean Blue */
             
-            /* Updated gradients */
-            --gradient-1: linear-gradient(135deg, #ff7885, #003d5b);
-            --gradient-2: linear-gradient(135deg, #7dcfea, #00719c);
+            /* Updated coastal gradients */
+            --gradient-1: linear-gradient(135deg, #FF9A8C, #1B4965);
+            --gradient-2: linear-gradient(135deg, #BEE9E8, #5FA8D3);
             --gradient-surface: linear-gradient(145deg, 
-                rgba(0, 61, 91, 0.9), 
-                rgba(0, 76, 112, 0.95)
+                rgba(27, 73, 101, 0.9), 
+                rgba(44, 95, 124, 0.95)
             );
             
-            /* Enhanced shadows */
-            --shadow-sm: 0 2px 8px rgba(0, 61, 91, 0.2);
-            --shadow-md: 0 4px 16px rgba(0, 61, 91, 0.3);
-            --shadow-lg: 0 8px 32px rgba(0, 61, 91, 0.4);
-            --shadow-accent: 0 8px 32px rgba(255, 120, 133, 0.2);
+            /* Enhanced shadows with coastal colors */
+            --shadow-sm: 0 2px 8px rgba(27, 73, 101, 0.2);
+            --shadow-md: 0 4px 16px rgba(27, 73, 101, 0.3);
+            --shadow-lg: 0 8px 32px rgba(27, 73, 101, 0.4);
+            --shadow-accent: 0 8px 32px rgba(255, 154, 140, 0.2);
             
-            /* Modern blur effects */
+            /* Keep existing blur effects, spacing, widths, and radius values */
             --blur-sm: blur(8px);
             --blur-md: blur(16px);
             --blur-lg: blur(24px);
             
-            /* Modern spacing */
             --space-xs: clamp(0.5rem, 1vw, 0.75rem);
             --space-sm: clamp(1rem, 2vw, 1.5rem);
             --space-md: clamp(2rem, 4vw, 3rem);
             --space-lg: clamp(3rem, 6vw, 4.5rem);
             --space-xl: clamp(4rem, 8vw, 6rem);
             
-            /* Container widths */
             --width-content: min(90%, 1200px);
             --width-narrow: min(90%, 800px);
             
-            /* Border radius */
             --radius-sm: 0.5rem;
             --radius-md: 1rem;
             --radius-lg: 1.5rem;
@@ -68,7 +65,6 @@
             overflow-x: hidden;
         }
 
-        /* Modern noise texture overlay */
         body::before {
             content: '';
             position: fixed;
@@ -79,7 +75,6 @@
             opacity: 0.4;
         }
 
-        /* Ultra-modern header */
         .header {
             position: fixed;
             top: 0;
@@ -119,7 +114,6 @@
             place-items: center;
         }
 
-        /* Hero section reimagined */
         .hero {
             min-height: 100vh;
             padding-top: 5rem;
@@ -173,7 +167,6 @@
             max-width: 50ch;
         }
 
-        /* Enhanced CTA section */
         .cta-group {
             display: flex;
             gap: var(--space-sm);
@@ -214,7 +207,6 @@
             border-color: var(--accent);
         }
 
-        /* Hero features list */
         .hero-features {
             display: flex;
             gap: var(--space-md);
@@ -232,7 +224,6 @@
             color: var(--accent);
         }
 
-        /* Services section */
         .services {
             padding: var(--space-xl) 0;
             background: var(--gradient-surface);
@@ -321,7 +312,6 @@
             line-height: 1.7;
         }
 
-        /* Stats section */
         .stats {
             padding: var(--space-lg) 0;
             background: linear-gradient(to bottom, 
@@ -360,7 +350,6 @@
             font-size: 0.875rem;
         }
 
-        /* Enhanced hero right side */
         .hero-visual {
             position: relative;
             height: 100%;
@@ -607,7 +596,6 @@
             opacity: 0.1;
         }
 
-        /* Enhanced Testimonials Section */
         .testimonials {
             padding: var(--space-xl) 0;
             background: var(--gradient-surface);
@@ -703,7 +691,6 @@
             font-size: 0.875rem;
         }
 
-        /* Process Section */
         .process {
             padding: var(--space-xl) 0;
             position: relative;
@@ -764,7 +751,6 @@
             line-height: 1.7;
         }
 
-        /* Connecting lines between process steps */
         .process-steps::before {
             content: '';
             position: absolute;
@@ -787,7 +773,6 @@
             }
         }
 
-        /* Enhanced Process Step Animation */
         .process-step {
             transform: translateY(0);
             opacity: 1;
@@ -1506,26 +1491,26 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
+                        <i class='bx bx-chevron-right'></i>
+                    </div>
+                    <h3 class="service-title">Chevron Collection</h3>
+                    <p class="service-description">Classic chevron patterns crafted with precision and style.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class='bx bx-strikethrough'></i>
+                    </div>
+                    <h3 class="service-title">Candy Stripe Collection</h3>
+                    <p class="service-description">Bold and vibrant candy stripe designs that catch the eye.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
                         <i class='bx bx-diamond'></i>
                     </div>
-                    <h3 class="service-title">String Collection</h3>
-                    <p class="service-description">Elegant string bracelets featuring premium materials and unique patterns.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class='bx bx-water'></i>
-                    </div>
-                    <h3 class="service-title">Ocean Collection</h3>
-                    <p class="service-description">Inspired by the sea, featuring shells, pearls, and maritime elements.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class='bx bx-heart'></i>
-                    </div>
-                    <h3 class="service-title">Friendship Series</h3>
-                    <p class="service-description">Perfect for sharing with friends, featuring matching designs and customizable options.</p>
+                    <h3 class="service-title">Diamond Collection</h3>
+                    <p class="service-description">Intricate diamond patterns that showcase timeless elegance.</p>
                 </div>
             </div>
         </div>
@@ -1618,6 +1603,30 @@
         </div>
     </section>
 
+    <section class="booking" id="booking">
+        <div class="process-container">
+            <header class="section-header">
+                <div class="section-badge">
+                    <i class='bx bx-diamond'></i>
+                    <span>Get Your Bracelet</span>
+                </div>
+                <h2 class="section-title">Start Your Journey</h2>
+                <p class="section-subtitle">Fill out the form below and we'll help you find your perfect bracelet</p>
+            </header>
+
+            <div class="booking-container">
+                <iframe
+                    src="https://www.aquaedge.co//share/cm6n0h89u0003lb03a87qfx4l"
+                    width="100%"
+                    height="600"
+                    frameborder="0"
+                    style="border: none; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);"
+                    title="Booking Form"
+                ></iframe>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="footer-glow"></div>
         <div class="footer-container">
@@ -1635,9 +1644,9 @@
                 </p>
                 
                 <div class="footer-contact">
-                    <a href="tel:+18439819626" class="contact-link">
-                        <i class='bx bx-phone'></i>
-                        <span>(843) 981-9626</span>
+                    <a href="mailto:cilliancoastalconnect@gmail.com" class="contact-link">
+                        <i class='bx bx-envelope'></i>
+                        <span>cilliancoastalconnect@gmail.com</span>
                     </a>
                     <div class="location">
                         <i class='bx bx-map'></i>
